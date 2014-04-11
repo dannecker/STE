@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2061597382">
+    <data-source source="LOCAL" name="Rails STE: production" uuid="8693061d-391b-40a1-b283-c1bf54661692">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/ste</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfcddf9edfdedfc7dfc6df9bdf9adf9a</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
