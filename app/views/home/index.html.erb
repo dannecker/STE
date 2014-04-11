@@ -1,0 +1,293 @@
+<% content_for :header do %>
+<link rel="stylesheet" href="/assets/css/revolution.css" media="screen"/>
+<link rel="stylesheet" href="/assets/css/media-slideshow.css" media="screen"/>
+<% end %>
+
+<% content_for :footer do %>
+<script src="/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets/js/jquery.themepunch.plugins.min.js"></script>
+<script>
+    $(document).ready(function() {
+        //Slideshow
+        $('.banner').revolution({
+            delay:9000,
+            startwidth:1040,
+            startheight:463,
+            onHoverStop:"off",						// Stop Banner Timet at Hover on Slide on/off
+
+            thumbWidth:100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+            thumbHeight:50,
+            thumbAmount:3,
+
+            hideThumbs:0,
+            navigationType:"bullet",				// bullet, thumb, none
+            navigationArrows:"none",				// nexttobullets, solo (old name verticalcentered), none
+
+            navigationStyle:"round-old",			// round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+
+            navigationHAlign:"center",				// Vertical Align top,center,bottom
+            navigationVAlign:"bottom",				// Horizontal Align left,center,right
+            navigationHOffset:-419,
+            navigationVOffset:72,
+
+            touchenabled:"on",						// Enable Swipe Function : on/off
+
+            stopAtSlide:-1,							// Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+            stopAfterLoops:-1,						// Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+
+            hideCaptionAtLimit:0,					// It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+            hideAllCaptionAtLilmit:0,				// Hide all The Captions if Width of Browser is less then this value
+            hideSliderAtLimit:0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
+
+
+            fullWidth:"on",
+
+            shadow:0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+        })
+
+    });
+</script>
+<script>
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+</script>
+<% end %>
+
+<%= render "shared/menu" %>
+
+<!-- slideshow start here -->
+<section id="slideshow-container">
+  <div class="banner">
+
+    <ul>
+
+      <li data-transition="fade">
+        <img src="//spetstechnoexport.com/assets/images/slideshow/zubr.jpg" alt="ZUBR" style="background:#e4e6e6">
+        <div class="caption general_caption pst_media14 lfl ltl"  data-x="56" data-y="83" data-speed="900" data-endspeed="900" data-start="100" data-end="5700" data-easing="easeOutBack" data-endeasing="easeInBack"><h1 class="bold">Navy</h1></div>
+        <div class="caption general_caption lfl ltl "  data-x="56" data-y="162" data-speed="900" data-endspeed="900" data-start="800" data-end="6200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-95">Warships</a></p>
+        </div>
+        <div class="caption general_caption pst_media4 lfl ltl"  data-x="56" data-y="210" data-speed="900" data-endspeed="900" data-start="1300" data-end="6700" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-96">Unmanned Maritime Vessels</a></p>
+        </div>
+        <div class="caption general_caption pst_media5 lfl ltl"  data-x="56" data-y="258" data-speed="900" data-endspeed="900" data-start="1800" data-end="7200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-97">Navigation Equipment</a></p>
+        </div>
+      </li>
+
+      <li data-transition="fade">
+        <img src="//spetstechnoexport.com/assets/images/slideshow/mriya.jpg" alt="AN 225 Mriya" style="background:#e4e6e6">
+        <div class="caption general_caption pst_media14 lfl ltl" data-x="56" data-y="83" data-speed="900" data-endspeed="900" data-start="100" data-end="5700" data-easing="easeOutBack" data-endeasing="easeInBack"><h1 class="bold">Air Force</h1></div>
+        <div class="caption general_caption lfl ltl" data-x="56" data-y="162" data-speed="900" data-endspeed="900" data-start="800" data-end="6200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-51">Aircraft</a></p>
+        </div>
+        <div class="caption general_caption pst_media4 lfl ltl" data-x="56" data-y="210" data-speed="900" data-endspeed="900" data-start="1300" data-end="6700" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-119">Helicopters</a></p>
+        </div>
+        <div class="caption general_caption pst_media5 lfl ltl" data-x="56" data-y="258" data-speed="900" data-endspeed="900" data-start="1800" data-end="7200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-61">Unmanned Aerial Systems</a></p>
+        </div>
+      </li>
+
+      <li data-transition="fade">
+        <img src="//spetstechnoexport.com/assets/images/slideshow/airdefence.jpg" alt="" style="background:#e4e6e6">
+        <div class="caption general_caption pst_media14 lfl ltl" data-x="56" data-y="83" data-speed="900" data-endspeed="900" data-start="100" data-end="5700" data-easing="easeOutBack" data-endeasing="easeInBack"><h1 class="bold">Air Defence</h1></div>
+        <div class="caption general_caption lfl ltl" data-x="56" data-y="162" data-speed="900" data-endspeed="900" data-start="800" data-end="6200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-121">Surface-to-Air missile systems</a></p>
+        </div>
+        <div class="caption general_caption pst_media4 lfl ltl" data-x="56" data-y="210" data-speed="900" data-endspeed="900" data-start="1300" data-end="6700" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/catalogues/447">S-125 Pechora-2D Surface-to-Air missile system</a></p>
+        </div>
+        <div class="caption general_caption pst_media5 lfl ltl" data-x="56" data-y="258" data-speed="900" data-endspeed="900" data-start="1800" data-end="7200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-109">Radars</a></p>
+        </div>
+      </li>
+
+      <li data-transition="fade">
+        <img src="//spetstechnoexport.com/assets/images/slideshow/robotics.jpg" alt="" style="background:#e4e6e6">
+        <div class="caption general_caption pst_media14 lfl ltl" data-x="56" data-y="83" data-speed="900" data-endspeed="900" data-start="100" data-end="5700" data-easing="easeOutBack" data-endeasing="easeInBack"><h1 class="bold">Electronic Warfare</h1></div>
+        <div class="caption general_caption lfl ltl" data-x="56" data-y="162" data-speed="900" data-endspeed="900" data-start="800" data-end="6200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-63">Direction Finding And Passive Reconnaissance Systems</a></p>
+        </div>
+        <div class="caption general_caption pst_media4 lfl ltl" data-x="56" data-y="210" data-speed="900" data-endspeed="900" data-start="1300" data-end="6700" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-64">Radars</a></p>
+        </div>
+        <div class="caption general_caption pst_media5 lfl ltl" data-x="56" data-y="258" data-speed="900" data-endspeed="900" data-start="1800" data-end="7200" data-easing="easeOutBack" data-endeasing="easeInBack">
+          <p class="lead-alt"><i class="icon-ok-sign"></i><a href="/defence-65">Jamming Systems</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- slideshow end here -->
+
+<!-- Call To Action -->
+<div id="cta">
+  <div class="container centered">
+    <h3>State Foreign Trade Enterprise “SpetsTechnoExport”</h3>
+    <p>Fully state-run entity incorporated by the Government of Ukraine in 1998 for export-import activities at foreign armaments markets.</p>
+    <br>
+    <a href="about"><button class="btn btn-embossed btn-primary">Meet Our History</button></a>
+  </div><!-- /container -->
+</div><!-- /cta -->
+
+
+<!-- Services Section -->
+<div class="container sinfo">
+  <div class="row svgicons centered">
+
+    <div class="col-lg-4">
+      <%= link_to image_tag("/assets/images/icons/ruslan.png"), product_path(@ruslan) %>
+      <h4>AN-124<br/> <b>"Ruslan"</b></h4>
+      <p>An-124 aircraft is designed for transportation of various cargos with 150 tons payload. Unique transport capacity and high performance of aircraft were acknowledged in commercial operation.</p>
+    </div><!-- col-lg-4 -->
+
+    <div class="col-lg-4">
+      <%= link_to image_tag("/assets/images/icons/kolchuga.png"), product_path(@kolchuga) %>
+      <h4>REECC<br/> <b>"Kolchuga"</b></h4>
+      <p>The High-Precision Passive System of long-range targets: detection, identification-and-determination-of-ground, sea-and-air targets coordinates and directions of movement.</p>
+    </div><!-- col-lg-4 -->
+
+    <div class="col-lg-4">
+      <%= link_to image_tag("/assets/images/icons/yatagan.png"), product_path(@mbt) %>
+      <h4>MBT<br/> <b>"Yatagan"</b></h4>
+      <p>The Yatagan МВТ is equipped with a 120 mm gun and an automatic loader placed in the turret bustle, which enable it to fire NATO standard ammunition.</p>
+    </div><!-- col-lg-4 -->
+
+  </div><!-- /row -->
+  <br>
+  <hr>
+</div><!-- /container -->
+
+
+<!-- Portfolio Section -->
+<div class="container">
+  <div class="row centered">
+    <h4>General Areas</h4>
+    <br>
+    <div class="ch-grid">
+      <div class="col-lg-4">
+        <%= link_to defence_path do %>
+        <li>
+          <div class="ch-item ch-img-1">
+            <div class="ch-info">
+              <h3>Defence Products</h3>
+              <p>Army, Navy, Air Force...<%= link_to 'Continue', defence_path %></p>
+            </div>
+          </div><!-- /ch-img-1 -->
+          <h6><b>Defence Products</b><br/> Army, Navy and more</h6>
+        </li>
+        <% end %>
+      </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+        <%= link_to research_path do %>
+        <li>
+          <div class="ch-item ch-img-2">
+            <div class="ch-info">
+              <h3>R&D</h3>
+              <p>UAVs, Radars...<%= link_to 'Continue', research_path %></p>
+            </div>
+          </div><!-- /ch-img-2 -->
+          <h6><b>Research & Development</b><br/> UAVs, Upgrades and more</h6>
+        </li>
+        <% end %>
+      </div><!-- /col-lg-4 -->
+
+      <div class="col-lg-4">
+        <%= link_to licenses_path do %>
+        <li>
+          <div class="ch-item ch-img-3">
+            <div class="ch-info">
+              <h3>Licenses & Certificates</h3>
+              <p>Authorisation letters...<%= link_to 'Continue', licenses_path %></p>
+            </div>
+          </div><!-- /ch-img-3 -->
+          <h6><b>Licenses & Certificates</b><br/> Permits and more</h6>
+        </li>
+        <% end %>
+      </div><!-- /col-lg-4 -->
+    </div><!-- /ch-igrid -->
+    <br>
+    <br>
+    <br>
+  </div><!-- /row -->
+</div><!-- /container -->
+
+<!-- Spacer 1 -->
+<div id="sp1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <br>
+        <h3>We will be glad to help our partners in distinguishing their needs in Ukrainian products, technologies and services.</h3>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="container">
+  <div class="row">
+    <br>
+    <br>
+    <br>
+    <div class="col-lg-6">
+      <div class="tabbable">
+        <ul class="nav nav-tabs nav-append-content" id="myTab">
+          <li class="active"><a href="#tab1">Defence Products</a></li>
+          <li class=""><a href="#tab2">Research & Development</a></li>
+        </ul> <!-- /tabs -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab1">
+            <div class="tabmod">
+              <h4><span class="fui-plus"></span> Defence Products</h4>
+              <br>
+              <p>
+                <%- if defined? @defence_categories and @defence_categories.any?
+                      @defence_categories.each do |category| %>
+                        <span class="fui-folder"></span> <%= link_to category.name, defence_category_path(category) %> <br/>
+                <%- end
+                end %>
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab2">
+            <div class="tabmod">
+              <h4><span class="fui-plus"></span> Research & Development</h4>
+              <br>
+              <p>
+                <%- if defined? @research_categories and @research_categories.any?
+                      @research_categories.each do |category| %>
+                        <span class="fui-folder"></span> <%= link_to category.name, research_category_path(category) %> <br/>
+                    <%- end
+                        end %>
+              </p>
+            </div>
+          </div>
+        </div> <!-- /tab-content -->
+      </div><!-- /Tabbable -->
+    </div><!-- /col-lg-6 -->
+
+    <div class="col-lg-5 col-lg-offset-1">
+      <h4>SFTE <b>«SpetsTechnoExport»</b> Profile</h4>
+      <div class="sinfo">
+        <p>Starting from July 1998 the State Foreign Trade Enterprise <b>«SpetsTechnoExport»</b> (Government of Ukraine Entity) specializes on export and import of up-to-date weapons, military products & technologies as well as special purpose equipment.</p>
+        <p>We also have tight cooperation with various Research Centers, Design Bureaus as well as Original Equipment Manufactures of the military-industrial complex of Ukraine and other countries.</p>
+        <p>Ukraine is one of the leading designer and manufacturer of the modern weapons, arms as well as personnel protection equipment.</p>
+        <p><!--h4>Need More Information?</h4--><a href="contact"><button class="btn btn-primary btn-wide pull-right">Contact Us</button></a></p>
+      </div>
+    </div><!-- col-lg-5 -->
+
+  </div><!-- /row -->
+  <br>
+  <br>
+  <br>
+</div><!-- /container -->
+
+<%= render "shared/news" %>
+
+<%= render "shared/footer" %>

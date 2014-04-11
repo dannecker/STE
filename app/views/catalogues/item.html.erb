@@ -1,0 +1,91 @@
+<%= render "shared/menu" %>
+
+<!-- Portfolio Section -->
+<div class="container">
+  <div class="row centered">
+    <br>
+    <br>
+    <div class="col-lg-8 col-lg-offset-2">
+      <h3><%= @product.name %></h3>
+      <p class="lead"><%= @product.brief %></p>
+    </div><!-- col-lg-8 -->
+    <br>
+
+    <!--div class="col-lg-10 col-lg-offset-1">
+      <img class="img-responsive" src="/assets/images/ruslan.jpg" alt="">
+    </div--><!-- col-lg-10 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+<div class="container">
+  <div class="row sinfo">
+    <div class="col-lg-10 col-lg-offset-1">
+      <p><%= raw(@product.description) %></p>
+    </div>
+
+    <!--div class="col-lg-2">
+      <h6>Antonov ASTC</h6>
+      <p>
+        In 1992 Antonov ASTC got type certificate for aircraft An-124-100, issued by Aviation Register of Interstate Aviation Committee (hereinafter referred to as AR IAC). <br/><br/>
+        In 2007 AR IAC issued Supplement to type certificate for modification An-124-100M-150.<br/><br/>
+        <button class="btn btn-primary">View Brochure</button>
+
+      </p>
+    </div-->
+  </div><!-- row -->
+</div><!-- container -->
+
+<!--<div class="container">-->
+  <!--<div class="row centered">-->
+    <!--<hr>-->
+    <!--<h4>Featured Products</h4>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+  <!--<div class="row centered">-->
+    <!--<div class="ch-grid">-->
+      <!--<div class="col-lg-4">-->
+        <!--<li>-->
+          <!--<div class="ch-item ch-img-1">-->
+            <!--<div class="ch-info">-->
+              <!--<h3>AN-225 «MRIYA»</h3>-->
+              <!--<p>ASTC ANTONOV <a href="project-single.html">View Project</a></p>-->
+            <!--</div>-->
+          <!--</div>&lt;!&ndash; /ch-img-1 &ndash;&gt;-->
+          <!--<h6><b>AN-225 "MRIYA"</b><br/> ASTC ANTONOV</h6>-->
+        <!--</li>-->
+      <!--</div>&lt;!&ndash; /col-lg-4 &ndash;&gt;-->
+
+      <!--<div class="col-lg-4">-->
+        <!--<li>-->
+          <!--<div class="ch-item ch-img-2">-->
+            <!--<div class="ch-info">-->
+              <!--<h3>UAV «Vorobey-M»</h3>-->
+              <!--<p>Lilienthal <a href="project-single.html">View Project</a></p>-->
+            <!--</div>-->
+          <!--</div>&lt;!&ndash; /ch-img-2 &ndash;&gt;-->
+          <!--<h6><b>UAV «Vorobey-M»</b><br/> Lilienthal</h6>-->
+        <!--</li>-->
+      <!--</div>&lt;!&ndash; /col-lg-4 &ndash;&gt;-->
+
+      <!--<div class="col-lg-4">-->
+        <!--<li>-->
+          <!--<div class="ch-item ch-img-3">-->
+            <!--<div class="ch-info">-->
+              <!--<h3>FRIGATE «Hetman Sagaidachnyi»</h3>-->
+              <!--<p>SSZ "ZALIV" <a href="project-single.html">View Project</a></p>-->
+            <!--</div>-->
+          <!--</div>&lt;!&ndash; /ch-img-3 &ndash;&gt;-->
+          <!--<h6><b>«Hetman Sagaidachnyi»</b><br/>SSZ "ZALIV"</h6>-->
+        <!--</li>-->
+      <!--</div>&lt;!&ndash; /col-lg-4 &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /ch-igrid &ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /row &ndash;&gt;-->
+  <!--<br>-->
+  <!--<br>-->
+<!--</div>&lt;!&ndash; /container &ndash;&gt;-->
+
+
+<%= render "shared/facts" %>
+<%= render "shared/footer" %>

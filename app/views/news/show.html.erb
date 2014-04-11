@@ -1,0 +1,43 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 sinfo">
+
+      <%- if defined? @post %>
+          <div class="blogcontent">
+            <%- if @post.picture.url %>
+                <%= image_tag @post.picture.url(:wide), class: "img-responsive" %>
+            <% end %>
+            <h6><%= @post.title %></h6>
+            <small><span class="fui-calendar"></span> <%= time_ago_in_words(@post.updated_at) %> ago</small>
+            <%= @post.content.html_safe %>
+          </div>
+          <br>
+          <br>
+      <% end %>
+
+      <div class="alert">
+        <h3>Found this useful?</h3>
+        <%= form_for Subscriber.new do |f| %>
+            <p>Consider to register to our weekly newsletter. Subscribe Now!</p>
+            <p><%= f.email_field :email, placeholder: "Add your email here", class: "form-control flat" %></p>
+            <%= f.button "SUBSCRIBE", type: :submit, class: "btn btn-warning" %>
+        <% end %>
+      </div>
+      <br>
+      <hr>
+      <br>
+
+    </div><!-- col-lg-8 / Content Section -->
+
+    <!-- Sidebar Section -->
+    <div class="col-lg-4 sidebar">
+      <%= render "shared/tags_and_last_posts" %>
+    </div><!-- col-lg-4 / Sidebar -->
+
+
+  </div><!-- /row -->
+</div><!-- /container -->
+
+<%= render "shared/footer" %>

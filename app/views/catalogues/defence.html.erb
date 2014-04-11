@@ -1,0 +1,78 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 sinfo">
+
+      <%- if defined? @descendants and @descendants.any?
+          @descendants.each do |category|
+            if category.products.any? %>
+      <div class="blogcontent">
+        <h6><%= category.name %></h6>
+        <p class="lead"><%= category.parent.name %></p>
+        <p>
+          <ul>
+          <%- category.products.each do |product| %>
+              <li><%= link_to product.name.titleize, product_path(product.id) %></li>
+          <%- end %>
+          </ul>
+        </p>
+        <!--button class="btn btn-primary btn-wide">Read More</button-->
+      </div>
+      <br>
+      <hr>
+      <br>
+      <%-   end
+          end
+      end %>
+
+      <%= paginate @descendants, :remote => true %>
+
+    </div><!-- col-lg-8 / Content Section -->
+
+    <!-- Sidebar Section -->
+    <div class="col-lg-4 sidebar">
+      <h6><span class="fui-arrow-right"></span> Defence Products</h6>
+      <p>
+        <%- if defined? @top_level_categories and @top_level_categories.any?
+            @top_level_categories.each do |category| %>
+                <span class="fui-folder"></span> <%= link_to category.name, defence_category_path(category) %> <br/>
+                <%- if category == @current_category or @current_category.ancestor_ids.include?(category.id) and category.children.any? %>
+                    <%- category.children.each do |subcategory| %>
+                        <span class="fui-folder sub-category"></span> <%= link_to truncate(subcategory.name), defence_category_path(subcategory) %> <br/>
+                    <%- end
+                    end
+            end
+        end %>
+      </p>
+      <% if defined? @featured and @featured.any? %>
+      <br>
+      <h6><span class="fui-arrow-right"></span> Featured Products</h6>
+      <% @featured.each do |feature| %>
+      <div class="pop-posts">
+        <p><img src="<%= feature.image_url %>" width="70" height="70" alt="<%= feature.name %>">
+          <a href="<%= product_path(feature.id) %>"><b><%= feature.name %></b> <br/> <%= truncate(feature.brief, length: 50) %></a>
+        </p>
+      </div>
+      <% end
+      end %>
+      <!--<br>-->
+      <!--<h6><span class="fui-arrow-right"></span> Tags</h6>-->
+      <!--<div class="tagsinput " style="height: 100%;">-->
+        <!--<span class="tag"><span>Tanks&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>Airplanes&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>Guns&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>UAVs&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>Riffles&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>Explosives&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<span class="tag"><span>Electronics&nbsp;&nbsp;</span><a class="tagsinput-remove-link"></a></span>-->
+        <!--<input id="tags1382559408818_tag" value="" data-default="" style="color: rgb(102, 102, 102); width: 7px;">-->
+      <!--</div>-->
+
+    </div><!-- col-lg-4 / Sidebar -->
+
+
+  </div><!-- /row -->
+</div><!-- /container -->
+
+<%= render "shared/footer" %>

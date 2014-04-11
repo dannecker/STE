@@ -1,0 +1,22 @@
+<%- if defined? @tags and @tags.any? %>
+    <h6><span class="fui-arrow-right"></span> Tags</h6>
+    <div class="tagsinput" style="height: 100%;">
+      <%- @tags.each do |tag| %>
+          <span class="tag">
+            <%= link_to tag.name, tag_path(tag) %>
+          </span>
+      <%- end %>
+      <input id="" value="" data-default="" style="color: rgb(102, 102, 102); width: 7px;">
+    </div>
+<%- end %>
+<% if defined? @last_posts and @last_posts.any? %>
+    <br>
+    <h6><span class="fui-arrow-right"></span> Latest News</h6>
+    <% @last_posts.each do |post| %>
+        <div class="pop-posts">
+          <p><img src="<%= post.picture.url(:thumb) %>" width="70" height="70" alt="<%= post.title %>">
+            <a href="<%= news_path(post) %>"><b><%= post.title %></b></a>
+          </p>
+        </div>
+    <% end
+       end %>

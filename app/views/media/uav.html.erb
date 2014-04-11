@@ -1,0 +1,244 @@
+<% content_for :header do %>
+    <link rel="stylesheet" type="text/css"  href="/assets/360viewer/css/global.css"/>
+    <link rel="stylesheet" type="text/css"  href="/assets/360viewer/css/page.css"/>
+
+    <script type="text/javascript" src="/assets/360viewer/js/FWDPage.js"></script>
+    <script type="text/javascript" src="/assets/360viewer/js/FWDViewer.js"></script>
+
+    <script type="text/javascript">
+        FWDConsole.setPrototype();
+        //var logger = new FWDConsole();
+        var viewer;
+
+        FWDUtils.onReady(function(){
+            init();
+        });
+
+        function setupViwer(){
+            viewer =  new FWDViewer({
+                //----main----//
+                divHolderId:"productHolder",
+                playListAndSkinId:"viewerPlaylistAndSkin",
+                displayType:"responsive",
+                preloaderText:"Loading: ",
+                startDraggingMode:"rotate",
+                showLargeImageVersionOnZoom:"yes",
+                useEntireScreenFor3dObject:"yes",
+                stopRotationAtEnds:"yes",
+                addCorrectionForWebKit:"yes",
+                addDragAndSpinSupport:"yes",
+                startAtImage:52,
+                imageWidth:920,
+                imageHeight:650,
+                zoomFactor:2,
+                dragRotationSpeed:.7,
+                dragAndSpinSpeed:1,
+                buttonsRotationSpeed:300,
+                slideShowDelay:300,
+                backgroundColor:"#fff",
+                preloaderFontColor:"#a2a3a3",
+                preloaderBackgroundColor:"#000000",
+                //----lightbox-----//
+                lightBoxWidth:920,
+                lightBoxHeight:650,
+                lightBoxBackgroundOpacity:.8,
+                lightBoxBackgroundColor:"#fff",
+                //----controller----//
+                buttons:"rotate, pan, roteteleft, rotateright, scrollbar, play, info, link, fullscreen",
+                buttonsToolTips:"Rotate, Move/Pan, Previous slide, Next slide, Zoom level: , Play/Pause, Info, Custom link, Full screen/Normal screen",
+                controllerPosition:"bottom",
+                inverseNextAndPrevRotation:"no",
+                addKeyboardSupport:"yes",
+                slideShowAutoPlay:"no",
+                startSpaceBetweenButtons:10,
+                spaceBetweenButtons:5,
+                startSpaceForScrollBarButtons:15,
+                startSpaceForScrollBar:0,
+                controllerMaxWidth:926,
+                controllerBackgroundOpacity:1,
+                controllerOffsetY:8,
+                scrollBarOffsetX:0,
+                scrollBarHandlerToolTipOffsetY:-4,
+                zoomInAndOutToolTipOffsetY:-4,
+                buttonsToolTipOffsetY:0,
+                link:"http://www.spetstechnoexport.com",
+                buttonToolTipFontColor:"#a2a3a3",
+                //----navigator----//
+                showNavigator:"yes",
+                navigatorPosition:"topright",
+                navigatorOffsetX:6,
+                navigatorOffsetY:6,
+                navigatorHandlerColor:"#FF0000",
+                navigatorBorderColor:"#AAAAAA",
+                //----info window----//
+                infoWindowBackgroundOpacity:.6,
+                infoWindowBackgroundColor:"#000000",
+                infoWindowScrollBarColor:"#999999",
+                //----markers-----//
+                showMarkersInfo:"no",
+                markerToolTipOffsetY:2,
+                toolTipWindowMaxWidth:500,
+                //----context menu----//
+                showScriptDeveloper:"no",
+                contextMenuLabels:"Rotate, Move/Pan, Previous slide, Next slide, Zoom in/Zoom out, Play/Pause, Info, Custom link, Full screen/Normal screen",
+                contextMenuBackgroundColor:"#4c4c4c",
+                contextMenuBorderColor:"#727272",
+                contextMenuSpacerColor:"#727272",
+                contextMenuItemNormalColor:"#a2a3a3",
+                contextMenuItemSelectedColor:"#FFFFFF",
+                contextMenuItemDisabledColor:"#595b5b"
+            });
+        }
+
+        if(window.addEventListener){
+            window.onclick = dest;
+        }else{
+            document.attachEvent("onclick", dest);
+        }
+
+        function dest(e){
+            return;
+            if(e.clientX < 200) {
+                if(viewer != null){
+                    viewer.destroy();
+                    viewer = null;
+                    //setupGrid();
+                }
+            }else if(e.pageX < 200) {
+                if(viewer != null){
+                    viewer.destroy();
+                    viewer = null;
+                    //setupGrid();
+                }
+            }
+
+        }
+    </script>
+<% end %>
+
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row centered">
+    <br>
+    <br>
+    <div class="col-lg-8 col-lg-offset-2">
+      <h3>Surveillance and Reconnaissance UAV «R-100»</h3>
+      <p class="lead">R-100 executes a real-time observation and is used daytime, in the night, in condition of bad visibility or its full absence.</p>
+    </div><!-- col-lg-8 -->
+    <br>
+
+    <div class="col-lg-10 col-lg-offset-1">
+
+      <!-- product holder -->
+      <div id="mainProductHolder">
+        <div id="productHolder"></div>
+      </div>
+
+    </div><!-- col-lg-10 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+<div id="viewerPlaylistAndSkin" style="display:none">
+
+  <!-- skin -->
+  <ul data-skin="">
+    <li data-preloader-path="/assets/360viewer/skin/preloader.png"></li>
+    <li data-hand-move-path="/assets/360viewer/skin/handmove.cur"></li>
+    <li data-hand-grab-path="/assets/360viewer/skin/handgrab.cur"></li>
+    <li data-hand-rotate-path="/assets/360viewer/skin/handrotate.cur"></li>
+    <li data-main-lightbox-close-button-normal-path="/assets/360viewer/skin/close-icon.png"></li>
+    <li data-main-lightbox-close-button-selected-path="/assets/360viewer/skin/close-icon-rollover.png"></li>
+    <li data-controller-background-left-path="/assets/360viewer/skin/bg-bar-left.png"></li>
+    <li data-controller-background-center-path="/assets/360viewer/skin/bg-bar-middle.png"></li>
+    <li data-controller-background-right-path="/assets/360viewer/skin/bg-bar-right.png"></li>
+    <li data-controller-pan-button-normal-state-path="/assets/360viewer/skin/move-icon.png"></li>
+    <li data-controller-pan-button-selected-state-path="/assets/360viewer/skin/move-icon-rollover.png"></li>
+    <li data-controller-rotate-button-normal-state-path="/assets/360viewer/skin/rotate-icon.png"></li>
+    <li data-controller-rotate-button-selected-state-path="/assets/360viewer/skin/rotate-icon-rollover.png"></li>
+    <li data-controller-next-button-normal-state-path="/assets/360viewer/skin/right-icon.png"></li>
+    <li data-controller-next-button-selected-state-path="/assets/360viewer/skin/right-icon-rollover.png"></li>
+    <li data-controller-prev-button-normal-state-path="/assets/360viewer/skin/left-icon.png"></li>
+    <li data-controller-prev-button-selected-state-path="/assets/360viewer/skin/left-icon-rollover.png"></li>
+    <li data-controller-play-button-normal-state-path="/assets/360viewer/skin/play-icon.png"></li>
+    <li data-controller-play-button-selected-state-path="/assets/360viewer/skin/play-icon-rollover.png"></li>
+    <li data-controller-pause-button-normal-state-path="/assets/360viewer/skin/pause-icon.png"></li>
+    <li data-controller-pause-button-selected-state-path="/assets/360viewer/skin/pause-icon-rollover.png"></li>
+    <li data-controller-info-button-normal-state-path="/assets/360viewer/skin/info-icon.png"></li>
+    <li data-controller-info-button-selected-state-path="/assets/360viewer/skin/info-icon-rollover.png"></li>
+    <li data-controller-link-button-normal-state-path="/assets/360viewer/skin/link-icon.png"></li>
+    <li data-controller-link-button-selected-state-path="/assets/360viewer/skin/link-icon-rollover.png"></li>
+    <li data-controller-fullscreen-full-button-normal-state-path="/assets/360viewer/skin/fullscr-full-icon.png"></li>
+    <li data-controller-fullscreen-full-button-selected-state-path="/assets/360viewer/skin/fullscr-full-icon-rollover.png"></li>
+    <li data-controller-fullscreen-normal-button-normal-state-path="/assets/360viewer/skin/fullscr-normal-icon.png"></li>
+    <li data-controller-fullscreen-normal-button-selected-state-path="/assets/360viewer/skin/fullscr-normal-icon-rollover.png"></li>
+    <li data-controller-zoomin-button-normal-state-path="/assets/360viewer/skin/zoomin.png"></li>
+    <li data-controller-zoomin-button-slected-state-path="/assets/360viewer/skin/zoomin-rollover.png"></li>
+    <li data-controller-zoomout-button-normal-state-path="/assets/360viewer/skin/zoomout.png"></li>
+    <li data-controller-zoomout-button-slected-state-path="/assets/360viewer/skin/zoomout-rollover.png"></li>
+    <li data-controller-scrollba-background-left-path="/assets/360viewer/skin/scrool-left.png"></li>
+    <li data-controller-scrollbar-background-middle-path="/assets/360viewer/skin/scrool-middle.png"></li>
+    <li data-controller-scrollbar-background-right-path="/assets/360viewer/skin/scrool-right.png"></li>
+    <li data-controller-scrollbar-handler-normal-state-path="/assets/360viewer/skin/handler.png"></li>
+    <li data-controller-scrollbar-handler-selected-state-path="/assets/360viewer/skin/handler-rollover.png"></li>
+    <li data-button-tooltip-bottom-pointer-path="/assets/360viewer/skin/button-tool-tip-down-pointer.png"></li>
+    <li data-button-tooltip-top-pointer-path="/assets/360viewer/skin/button-tool-tip-top-pointer.png"></li>
+    <li data-button-tooltip-left-path="/assets/360viewer/skin/button-tool-tip-left.png"></li>
+    <li data-button-tooltip-middle-path="/assets/360viewer/skin/button-tool-tip-middle.png"></li>
+    <li data-button-tooltip-right-path="/assets/360viewer/skin/button-tool-tip-right.png"></li>
+    <li data-info-window-close-button-normal-state-path="/assets/360viewer/skin/close-icon.png"></li>
+    <li data-info-window-close-button-selected-state-path="/assets/360viewer/skin/close-icon-rollover.png"></li>
+  </ul>
+
+  <!-- info window-->
+  <ul data-info="">
+    <div class="infoDiv">
+      <br/><h4>Surveillance and Reconnaissance UAV «R-100»</h4>
+
+      <br/><br/><h4>R-100 executes a real-time observation and is used daytime, in the night, in condition of bad visibility or its full absence.</h4>
+
+    </div>
+  </ul>
+
+  <!-- markers -->
+  <ul data-markers="">
+  </ul>
+
+  <!-- palylist (adding images) -->
+  <ul data-paylist="">
+    <% @total_slides.times do |i| %>
+        <ul>
+          <li data-large-image-path="/assets/360viewer/data/large/uav_<%= i %>.jpg"></li>
+          <li data-navigator-image-path="/assets/360viewer/data/nav/uav_<%= i %>.jpg"></li>
+          <li data-small-image-path="/assets/360viewer/data/small/uav_<%= i %>.jpg"></li>
+        </ul>
+    <% end %>
+  </ul>
+
+</div>
+
+  <div class="container">
+    <div class="row sinfo">
+      <div class="col-lg-6 col-lg-offset-1">
+        <p>On board are fixed day, night, IR cameras or scanners. Videodata and telemetry is transmitted on point of control (or the other user) real-time or may recorded onboard. The flights can be executed under program, or in mode of the remote control by operator.</p>
+
+        <p>Time of preparing R-100 to flight not more than 5 minutes. Take-off – from catapult, landing – to net, with parachute (emergency mode) or on small ground area.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <h6>Overview</h6>
+        <p>
+          <ul>
+			<li>Possible side wind under take-off – 10 m/sek.</li>
+          	<li>Lenght of start catapult – 3-6 m</li>
+            <li>Landing grid-trap – 2,5 * 6 m</li>
+            <li>Dimensions – 1,8 * 1,4 m</li>
+		  </ul>
+          <br/><br/>
+          <a href="/upload/pdf/UAVs.pdf"><button class="btn btn-primary">View Brochure</button></a>
+        </p>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+
+<%= render "shared/footer" %>

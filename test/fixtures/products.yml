@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 
+  name: MyString
+  brief: MyText
+  description: MyText
+  ancestry: MyString
+  position: 1
+
+two:
+  category_id: 
+  name: MyString
+  brief: MyText
+  description: MyText
+  ancestry: MyString
+  position: 1

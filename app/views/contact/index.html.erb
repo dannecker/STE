@@ -1,0 +1,71 @@
+<%= render "shared/menu" %>
+
+<div id="mapwrap">
+  <iframe height="450" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?t=m&ie=UTF8&ll=48.752693,31.791016&spn=62.34552,156.972656&z=5&output=embed"></iframe>
+</div>
+
+<div class="container">
+  <div class="row sinfo">
+    <div class="col-lg-4">
+      <h4>Head Office, Ukraine</h4>
+      <br>
+      <hr>
+      <p>
+        7, Moskowsky Avenue<br/>
+        04073, Kyiv, Ukraine.
+      </p>
+      <p>
+        +380 44 568 5070<br/>
+        +380 44 568 5072<br/>
+        office@ste.kiev.ua
+      </p>
+      <br>
+      <h4>Liaison Office, India</h4>
+      <br>
+      <hr>
+      <p>
+        B-5/147 Safdarjung enclave<br/>
+        New Delhi – 110057
+      </p>
+      <p>
+        +91 11 26153792<br/>
+        +91 98 11164177<br/>
+        petr@ste.com.ua
+      </p>
+      <hr>
+    </div><!-- col-lg-4 -->
+
+    <style>
+
+    </style>
+
+    <div class="col-lg-8">
+      <%= form_for Inquiry.new do |f| %>
+      <h4>Need To Contact Us?</h4>
+      <p>You can contact our business development offices for trade show information. All questions from media professionals should be directed to our Corporate Infromation contacts.</p>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :name, placeholder: "Your Name", class: "form-control", required: true, pattern: ".{2,32}" %>
+        <span class="input-icon fui-check-inverted validity-check"></span>
+      </div>
+
+      <div class="form-group">
+        <%= f.email_field :email, placeholder: "Your Email", class: "form-control", required: true %>
+        <span class="input-icon fui-check-inverted validity-check"></span>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :subject, placeholder: "Subject", class: "form-control", required: true, pattern: ".{2,32}" %>
+        <span class="input-icon fui-check-inverted validity-check"></span>
+      </div>
+
+      <%= f.text_area :message, placeholder: "Enter Something", class: "form-control", required: true, pattern: ".{2,32}" %>
+      <br>
+
+      <%= f.button "Submit", type: :submit, class: "btn btn-wide btn-primary" %>
+      <% end %>
+    </div><!-- col-lg-8 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+<%= render "shared/footer" %>

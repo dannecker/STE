@@ -1,0 +1,55 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row centered">
+    <br>
+    <br>
+    <h3>
+      Available Downloads</h3>
+    <br>
+
+    <%- if defined? @downloads and @downloads.any? %>
+        <div class="ch-grid">
+          <% @downloads.each_with_index do |item, index| %>
+              <% if ( index%4 == 0 && index != 0 ) %> </div><br><!-- /ch-igrid --><div class="ch-grid">  <% end %>
+              <div class="col-lg-3">
+                <%= link_to item.attachment.url do %>
+                    <li>
+                      <div class="ch-item" style="background-image: url(<%= item.preview.url(:thumb) %>)">
+                        <div class="ch-info">
+                          <h3><%= item.title %></h3>
+                          <p><%= link_to 'View', item.attachment.url %></p>
+                        </div>
+                      </div><!-- /ch-img-1 -->
+                      <h6><b><%= item.title %></b><br/> <%= item.kind %></h6>
+                    </li>
+                <% end %>
+              </div><!-- /col-lg-3 -->
+          <% end %>
+          </div><br><!-- /ch-igrid -->
+    <% end %>
+
+  </div><!-- /row -->
+  <br>
+  <br>
+  <br>
+</div><!-- /container -->
+
+<%= render "shared/facts" %>
+<%= render "shared/footer" %>
+
+<% content_for :footer do %>
+<!-- smartlook includes -->
+<script type="text/javascript">
+    var issuuConfig = {
+        guid: 'ddcbee8a-7591-49fd-9ac7-eeba3f2cc3c8',
+        domain: '*.spetstechnoexport.com'
+    };
+</script>
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='http://static.issuu.com/smartlook/ISSUU.smartlook.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- end smartlook includes -->
+<% end %>
+
+

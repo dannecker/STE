@@ -1,0 +1,50 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 sinfo">
+
+      <%- if defined? @descendants and @descendants.any?
+            @descendants.each do |category|
+              if category.products.any?
+                 product = category.products.first %>
+                  <div class="blogcontent">
+                    <h6><%= category.name %></h6>
+                    <p>
+                        <%= raw product.description.truncate(264) %>
+                    </p>
+                    <%= button_to 'Read More', product_path(product.id), class: "btn btn-primary btn-wide", :method => :get %>
+                  </div>
+                  <br>
+                  <hr>
+                  <br>
+              <%-   end
+                    end
+                    end %>
+
+      <%= paginate @descendants, :remote => true %>
+
+    </div><!-- col-lg-8 / Content Section -->
+
+    <!-- Sidebar Section -->
+    <div class="col-lg-4 sidebar">
+      <h6><span class="fui-arrow-right"></span> Research & Development</h6>
+      <p>
+        <%- if defined? @top_level_categories and @top_level_categories.any?
+              @top_level_categories.each do |category| %>
+                <span class="fui-folder"></span> <%= link_to category.name, research_category_path(category) %> <br/>
+                <%- if category == @current_category or @current_category.ancestor_ids.include?(category.id) and category.children.any? %>
+                    <%- category.children.each do |subcategory| %>
+                        <span class="fui-folder sub-category"></span> <%= link_to truncate(subcategory.name), research_category_path(subcategory) %> <br/>
+                    <%- end
+                        end
+                        end
+                        end %>
+      </p>
+    </div><!-- col-lg-4 / Sidebar -->
+
+
+  </div><!-- /row -->
+</div><!-- /container -->
+
+<%= render "shared/footer" %>

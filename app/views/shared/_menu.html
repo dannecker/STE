@@ -1,0 +1,37 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">SPETS TECHNO EXPORT</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li <% if controller_name == 'home' %>class="active"<% end %>><a href="/">Home</a></li>
+                <li <% if controller_name == 'about' %>class="active"<% end %>><a href="/about">Who We Are</a></li>
+                <li <% if controller_name == 'services' %>class="active"<% end %>><a href="/services">Services</a></li>
+                <li <% if controller_name == 'news' %>class="active"<% end %>><a href="/newsroom">News</a></li>
+                <li class="dropdown <% if %w(defence research downloads item).include? action_name %>active<% end %>">
+                    <a href="/catalogues" class="dropdown-toggle" data-toggle="dropdown">Catalogues <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/defence">Defence Products</a></li>
+                        <li><a href="/research">Research & Development</a></li>
+                        <li><a href="/downloads">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown <% if %w(uav tank ship gun).include? action_name %>active<% end %>">
+                    <a href="/3d-views" class="dropdown-toggle" data-toggle="dropdown">3D Views <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/uav-r100-3d-view">UAV «R-100»</a></li>
+                    </ul>
+                </li>
+                <li <% if controller_name == 'licenses' %>class="active"<% end %>><a href="/licenses">Licenses</a></li>
+                <li <% if controller_name == 'contact' %>class="active"<% end %>><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>

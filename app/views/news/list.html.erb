@@ -1,0 +1,41 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 sinfo">
+
+      <%- if defined? @posts and @posts.any?
+            @posts.each do |post| %>
+              <div class="blogcontent">
+                <h6><%= post.title %></h6>
+                <small><span class="fui-calendar"></span> <%= time_ago_in_words(post.updated_at) %> ago</small>
+                <p class="clearfix">
+                  <span class="col-xs-3"><%= image_tag post.picture.url(:thumb), class: "img-responsive pull-left img-thumbnail" %></span>
+                  <span class="col-xs-8">
+                    <%= post.description %><br>
+                    <%= link_to news_path(post) do %>
+                        <button class="btn btn-primary btn-wide pull-right">Read More</button>
+                    <% end %>
+                  </span>
+                </p>
+              </div>
+              <br>
+              <hr>
+              <br>
+          <%-   end
+                end %>
+
+      <%= paginate @posts, :remote => true %>
+
+    </div><!-- col-lg-8 / Content Section -->
+
+    <!-- Sidebar Section -->
+    <div class="col-lg-4 sidebar">
+      <%= render "shared/tags_and_last_posts" %>
+    </div><!-- col-lg-4 / Sidebar -->
+
+
+  </div><!-- /row -->
+</div><!-- /container -->
+
+<%= render "shared/footer" %>

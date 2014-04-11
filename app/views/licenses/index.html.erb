@@ -1,0 +1,38 @@
+<%= render "shared/menu" %>
+
+<div class="container">
+  <div class="row centered">
+    <br>
+    <br>
+    <h3>
+      Licenses, Certificates & Authorisation Letters</h3>
+    <br>
+
+    <%- if defined? @licenses and @licenses.any? %>
+        <div class="ch-grid">
+          <% @licenses.each_with_index do |item, index| %>
+              <% if ( index%4 == 0 && index != 0 ) %> </div><br><!-- /ch-igrid --><div class="ch-grid">  <% end %>
+              <div class="col-lg-3">
+                <%= link_to item.attachment.url do %>
+                    <li>
+                      <div class="ch-item" style="background-image: url(<%= item.attachment.url(:thumb) %>)">
+                        <div class="ch-info">
+                          <h3><%= item.title %></h3>
+                          <p><%= link_to 'View', item.attachment.url %></p>
+                        </div>
+                      </div><!-- /ch-img-1 -->
+                      <h6><b><%= item.title %></b><br/> <%= item.kind %></h6>
+                    </li>
+                <% end %>
+              </div><!-- /col-lg-3 -->
+          <% end %>
+          </div><br><!-- /ch-igrid -->
+    <% end %>
+
+  </div><!-- /row -->
+  <br>
+  <br>
+  <br>
+</div><!-- /container -->
+
+<%= render "shared/footer" %>

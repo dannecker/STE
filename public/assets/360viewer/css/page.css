@@ -1,0 +1,30 @@
+/* Product holder */
+#mainProductHolder{
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	margin-top:12px;
+	padding-bottom:26px;
+}
+
+#productHolder{
+	position:relative;
+	background-color:#FFFFFF;
+}
+
+#productHolderBackground{
+	position:absolute;
+}
+
+/* Color and style */
+.blue{
+	color:#0099ff;
+}
+
+.dark{
+	color:#CCCCCC;
+}
+
+.darkMainText{
+	color:#BBBBBB;
+}

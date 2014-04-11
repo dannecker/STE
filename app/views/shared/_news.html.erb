@@ -1,0 +1,22 @@
+<% if defined? @posts and @posts.any? %>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <h4 class="centered">Corporate <b>Newsroom</b></h4>
+      <br>
+
+      <% @posts.each do |post| %>
+          <div class="col-md-4">
+            <div class="bc">
+              <%= image_tag post.picture.url(:medium), class: "img-responsive" %>
+              <p><%= link_to post.title.titleize, news_path(post) %></p>
+              <p><%= truncate( (post.description || post.content), length: 100) %></p>
+              <p><date><%= time_ago_in_words(post.updated_at) %> ago</date></p>
+            </div>
+          </div>
+      <% end %>
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- grey wrap -->
+<% end %>
