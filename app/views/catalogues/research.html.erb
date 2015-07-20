@@ -13,7 +13,7 @@
                     <p>
                         <%= raw product.description.truncate(264) %>
                     </p>
-                    <%= button_to 'Read More', product_path(product.id), class: "btn btn-primary btn-wide", :method => :get %>
+                    <%= button_to t(:read_more), product_path(product.id), class: "btn btn-primary btn-wide", :method => :get %>
                   </div>
                   <br>
                   <hr>
@@ -28,7 +28,7 @@
 
     <!-- Sidebar Section -->
     <div class="col-lg-4 sidebar">
-      <h6><span class="fui-arrow-right"></span> Research & Development</h6>
+      <h6><span class="fui-arrow-right"></span> <%= t '.rnd' %></h6>
       <p>
         <%- if defined? @top_level_categories and @top_level_categories.any?
               @top_level_categories.each do |category| %>

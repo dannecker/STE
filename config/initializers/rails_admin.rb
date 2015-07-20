@@ -27,10 +27,49 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = [Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture ]
+  config.excluded_models = [ Ckeditor::Asset, Ckeditor::AttachmentFile, Ckeditor::Picture ]
+
+  config.model 'Post::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :title, :description, :content
+  end
+
+  config.model 'Document::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :title, :kind
+  end
+
+  config.model 'Category::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :name, :brief
+  end
+
+  config.model 'Product::Translation' do
+    visible false
+    configure :locale, :hidden do
+      help ''
+    end
+    include_fields :locale, :name, :brief, :description
+  end
 
   # Include specific models (exclude the others):
-  # config.included_models = []
+  config.included_models = [Category, Category::Translation,
+                            Document, Document::Translation,
+                            Inquiry,
+                            Post, Post::Translation,
+                            Product, Product::Translation,
+                            Subscriber,
+                            Tag,
+                            User]
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]

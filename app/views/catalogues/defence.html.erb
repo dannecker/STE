@@ -32,7 +32,7 @@
 
     <!-- Sidebar Section -->
     <div class="col-lg-4 sidebar">
-      <h6><span class="fui-arrow-right"></span> Defence Products</h6>
+      <h6><span class="fui-arrow-right"></span> <%= t '.defence_products' %></h6>
       <p>
         <%- if defined? @top_level_categories and @top_level_categories.any?
             @top_level_categories.each do |category| %>
@@ -47,7 +47,7 @@
       </p>
       <% if defined? @featured and @featured.any? %>
       <br>
-      <h6><span class="fui-arrow-right"></span> Featured Products</h6>
+      <h6><span class="fui-arrow-right"></span> <%= t '.featured_products' %></h6>
       <% @featured.each do |feature| %>
       <div class="pop-posts">
         <p><img src="<%= feature.image_url %>" width="70" height="70" alt="<%= feature.name %>">

@@ -10,7 +10,7 @@
                 <%= image_tag @post.picture.url(:wide), class: "img-responsive" %>
             <% end %>
             <h6><%= @post.title %></h6>
-            <small><span class="fui-calendar"></span> <%= time_ago_in_words(@post.updated_at) %> ago</small>
+            <small><span class="fui-calendar"></span> <%= time_ago_in_words(@post.updated_at) %> <%= t :ago %></small>
             <%= @post.content.html_safe %>
           </div>
           <br>
@@ -18,11 +18,11 @@
       <% end %>
 
       <div class="alert">
-        <h3>Found this useful?</h3>
+        <h3><%= t '.subscribe.title' %></h3>
         <%= form_for Subscriber.new do |f| %>
-            <p>Consider to register to our weekly newsletter. Subscribe Now!</p>
-            <p><%= f.email_field :email, placeholder: "Add your email here", class: "form-control flat" %></p>
-            <%= f.button "SUBSCRIBE", type: :submit, class: "btn btn-warning" %>
+            <p><%= t '.subscribe.desc' %></p>
+            <p><%= f.email_field :email, placeholder: t('.subscribe.form_placeholder'), class: "form-control flat" %></p>
+            <%= f.button t('.subscribe.button_text'), type: :submit, class: "btn btn-warning" %>
         <% end %>
       </div>
       <br>

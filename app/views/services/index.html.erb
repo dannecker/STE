@@ -1,7 +1,7 @@
 <% content_for :footer do %>
-<script>
-    $('.carousel').carousel()
-</script>
+    <script>
+        $('.carousel').carousel()
+    </script>
 <% end %>
 
 <%= render "shared/menu" %>
@@ -10,7 +10,7 @@
 <div id="servicewrap">
   <div class="container">
     <div class="row">
-      <h1>Our <b>Services</b></h1>
+      <h1><%= raw t '.title' %></h1>
     </div>
   </div>
 </div>
@@ -20,12 +20,12 @@
 <div class="container sinfo">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-      <h3>From the very beginning of our creation the Company gained reputation as a predicted and reliable partner majored in commercial support and trade facilitation Customers in various regions throughout the globe.<br><br>
-
-        <p>The main services which are provided SFTE “SpetsTechnoExport” around the world are as follows:</p>
+      <h3>
+        <%= raw t '.intro' %>
       </h3>
     </div>
-  </div><!-- /row -->
+  </div>
+  <!-- /row -->
 </div><!-- /container -->
 
 
@@ -37,7 +37,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                <span class="fui-plus"></span> Air Force
+                <span class="fui-plus"></span> <%= t '.air_force_title' %>
               </a>
             </h4>
           </div>
@@ -45,18 +45,7 @@
             <div class="panel-body">
               <p>
               <ul>
-                <li>Overhaul, life extension, modernization and spare parts support of AN-32, MiG-23, MiG-27, MiG-29 and L-29 / 39 Aircraft</li>
-                <li>Supply of all range of spares, aggregates, units pertaining to all AN family Aircraft</li>
-                <li>Supply of MiG-21, MiG-29 and Su-30 aviation radar units, helmet mounted target designation systems, head-up displays, aggregates and spares</li>
-                <li>Overhaul and logistics support of all types & modifications of TU-142M, IL-38, IL-76/78, MiG and Sukhoi Aircraft Family, Kamov Family Helicopters and Mi-25/35, Mi-8/17 and Mi-14 Helicopters</li>
-                <li>Overhaul of R-11/13, R-25 (including R-25U-300 type), R-29, RD-33 and AL-31 series aeroengines, KSA-2(3) gear box and its aggregates. Aircraft aggregates, TG-16M and TA-9 and TA-12 turbogenerators. Overhaul of the Aggregates pertaining to the D-30KP (D-30KP-2) Aeroengine of IL-76 / 78 /A-50 Aircraft</li>
-                <li>Upgrade of Mi-8/17 and Mi-25/35 Helicopters</li>
-                <li>Modernization of mobile complexes MK-9.12 (for testing MiG-29 A/C) and GURT (for testing R-27, R-60 and R-73 missiles)</li>
-                <li>Supply of state-of-the-art Infrared Counter-Measure Station “ADROS”, engine exhaust shields, flare dispenser systems and development of complex protection of all rotary and fixed wing aircraft against all missiles with IR seeker heads existing in the world</li>
-                <li>Supply of modern tactical UAV, development and supply of defence UAV</li>
-                <li>Designing and development of different types of aviation aggregates, units, pumps etc. at Ukrainian Aggregates Design Bureaus</li>
-                <li>Training of the customers’ pilots and technical staff in Ukraine (in this regard please be noted that every early a lot of people (pilots, technical people etc.) from NATO countries are trained in Ukraine)
-                </li>
+                <%= raw t '.air_force_text' %>
               </ul>
               </p>
             </div>
@@ -66,7 +55,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                <span class="fui-plus"></span> Army
+                <span class="fui-plus"></span> <%= t '.army_title' %>
               </a>
             </h4>
           </div>
@@ -74,14 +63,7 @@
             <div class="panel-body">
               <p>
               <ul>
-                <li>Modernization of T-55, T-72 tanks, APCs, BTR-50, 60, 70, 80, BMP-I, BMP-II</li>
-                <li>Supply of various type of Tanks, APCs and armoured special vehicles</li>
-                <li>Supply of Engines with increased HP (up to 1400) for T-72, T-80, T-84, T-90 tanks</li>
-                <li>Supply of active armour protection systems “Nozh”, “Zaslon”, “Duplet” and Range finder Jammer “F3 Fantom” for installation on tanks and APCs</li>
-                <li>Spare parts support of “Tunguska”, “Kvadrat”, ”Pechora”, “OSA-AKM”, “Shilka” anti-aircraft weapon systems, T-55, T-72, T-90, BMP-I/II/II, BRDEM armoured vehicles</li>
-                <li>Supply of KRAZ types vehicles and spares support, supply of spares for  URAL, ZIL vehicles</li>
-                <li>Training of the customers’ drivers and technical staff at Ukraine</li>
-                <li>Supply of different types of arms / armaments as well as supply of bullet-proof vest for army and paramilitary personal</li>
+                <%= raw t '.army_text' %>
               </ul>
               </p>
             </div>
@@ -91,7 +73,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                <span class="fui-plus"></span> Radio Electronic Equipment
+                <span class="fui-plus"></span> <%= t '.radio_title' %>
               </a>
             </h4>
           </div>
@@ -99,13 +81,7 @@
             <div class="panel-body">
               <p>
               <ul>
-                <li>Development and supply of long range reconnaissance passive radar systems, jamming and monitoring systems: Kolchuga, Mineral-ME, Mandat, Liman etc. </li>
-                <li>Modernization and digitalization of P-18, P-19 radars, PRV altimeters, RSBN-4N radars, RSP-10 stations, transfer of technology, logistic support </li>
-                <li>Supply of new night and day vision sights and navigation equipment</li>
-                <li>Supply of equipment of information-intelligence complexes including GSM, CDMA, THURAYA and IRIDIUM monitoring systems</li>
-                <li>Supply of solid-sate flight data registering device BUR-4-1</li>
-                <li>Training of the customers operation and technical staff at Ukraine</li>
-                </li>
+                <%= raw t '.radio_text' %>
               </ul>
               </p>
             </div>
@@ -116,7 +92,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                <span class="fui-plus"></span> Navy
+                <span class="fui-plus"></span> <%= t '.navy_title' %>
               </a>
             </h4>
           </div>
@@ -124,39 +100,30 @@
             <div class="panel-body">
               <p>
               <ul>
-                <li>
-                  Supply, repair / overhaul and modernization of engineering systems, main engines, turbine equipment and weaponry of warships projects 1159.2, 1234, 1241RE, 1241.2, 205, 771, 61ME, 159, 1135.6, 266ME, 1258 and submarines 877EKM, 641
-                </li>
-                <li>
-                  Production of dry and floating docks of reinforced concrete and composite frame with lifting capacity from 400 to 25 000 metric tons
-                </li>
-                <li>
-                  Unique hydro acoustic systems for detection of underwater subversive forces and means, securing of coastal areas
-                </li>
+                <%= raw t '.navy_text' %>
               </ul>
-
               </p>
             </div>
           </div>
         </div>
 
 
-
-      </div><!-- panel-group -->
-    </div><!-- col-lg-8 -->
-
+      </div>
+      <!-- panel-group -->
+    </div>
+    <!-- col-lg-8 -->
 
 
     <div class="col-lg-4">
       <div class="alert alert-success">
-        <h4>Got questions?</h4>
-        <a href="contact" class="btn btn-primary btn-wide"><i class="fui-link"></i> Contact Us</a>
+        <h4><%= t '.got_questions' %></h4>
+        <a href="<%= contact_path %>" class="btn btn-primary btn-wide">
+          <i class="fui-link"></i> <%= t '.contact_us' %>
+        </a>
       </div>
-
     </div>
 
   </div>
-
 </div><!-- /container -->
 
 
@@ -165,17 +132,19 @@
   <div class="container">
     <div class="row">
       <br>
-      <h3>The SFTE “SpetsTechnoExport” has all Government licenses and permissions required for export of military products abroad unlike other Ukrainian trading companies and OEM.</h3>
+      <h3><%= t '.cta' %></h3>
       <br>
     </div>
-  </div><!-- /container -->
+  </div>
+  <!-- /container -->
 </div><!-- /sp1 -->
 
 <!-- Charts Section -->
 <div class="container sinfo">
   <div class="row centered">
-    <img class="img-responsive" src="assets/images/client-logos.png" alt="">
-  </div><!-- /row -->
+    <img class="img-responsive" src="/assets/images/client-logos.png" alt="">
+  </div>
+  <!-- /row -->
 </div><!-- /container -->
 
 
@@ -183,7 +152,8 @@
 <div id="g">
   <div class="container">
     <div class="col-lg-10 col-lg-offset-1 centered">
-      <h4>Some Facts</h4>
+      <h4><%= t '.facts.title' %></h4>
+
       <div id="carousel-example-generic" class="carousel slide">
 
         <!-- Wrapper for slides -->
@@ -192,22 +162,30 @@
           <div class="item active">
             <div class="col-md-10 col-md-offset-1">
               <div class="tc centered">
-                <p>We are able to offer for supply all kinds of spares for the above mentioned Aircraft, Helicopters, Tanks, APCs, Radars, Ships and Submarines, as well as aggregates, equipment and raw materials during entire period of their operation.</p>
-              </div><!-- /tc -->
-            </div><!-- /col-md-10 -->
-          </div><!-- /item -->
+                <p><%= t '.facts.fact_1' %></p>
+              </div>
+              <!-- /tc -->
+            </div>
+            <!-- /col-md-10 -->
+          </div>
+          <!-- /item -->
 
           <!-- Second Testimonial-->
           <div class="item">
             <div class="col-md-10 col-md-offset-1">
               <div class="tc centered">
-                <p>“SpetsTechnoExport” is ready for mutually beneficial co-operation. We will be glad to help our partners in distinguishing their needs in Ukrainian products, technologies and services.</p>
-              </div><!-- /tc -->
-            </div><!-- /col-md-10 -->
-          </div><!-- /item -->
+                <p><%= t '.facts.fact_2' %></p>
+              </div>
+              <!-- /tc -->
+            </div>
+            <!-- /col-md-10 -->
+          </div>
+          <!-- /item -->
 
-        </div><!-- /carousel-inner -->
-      </div><!-- /carousel-example -->
+        </div>
+        <!-- /carousel-inner -->
+      </div>
+      <!-- /carousel-example -->
 
       <!-- Controls -->
       <a class="left carousel-control" href="services#carousel-example-generic" data-slide="prev">
@@ -217,8 +195,10 @@
         <span class="icon-next"></span>
       </a>
 
-    </div><!-- /col-lg-10 -->
-  </div><!-- /container -->
+    </div>
+    <!-- /col-lg-10 -->
+  </div>
+  <!-- /container -->
   <br>
 </div><!-- /g - testimonial -->
 

@@ -11,6 +11,8 @@
  *= require bootstrap
  *= require_self
  *= require_tree .
+ *= require flags/basic
+ *= require flags/flags16
  */
 
 /* User sign in and sign forms. */

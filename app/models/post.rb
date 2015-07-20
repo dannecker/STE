@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   has_attached_file :picture,
                     :styles => {wide: "750x750>",
                                 medium: "500x375#",
-                                thumb: "150x150#" },
+                                thumb: "150x150#"},
                     :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
@@ -15,11 +15,19 @@ class Post < ActiveRecord::Base
     order created_at: :desc
   }
 
-  rails_admin do
-    edit do
-      include_fields :title, :description, :picture, :tags
+  translates :title, :description, :content
+  accepts_nested_attributes_for :translations, allow_destroy: true
 
+  rails_admin do
+    configure :translations, :globalize_tabs
+
+    edit do
+      field :title
+      field :description
+      field :picture
+      field :tags
       field :content, :ck_editor
+      field :translations
     end
 
     list do

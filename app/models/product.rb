@@ -6,13 +6,18 @@ class Product < ActiveRecord::Base
 
   validates :category, :name, :brief, :description, presence: true
 
+  translates :name, :brief, :description
+  accepts_nested_attributes_for :translations, allow_destroy: true
+
   rails_admin do
     nestable_list true
+    configure :translations, :globalize_tabs
 
     edit do
       include_fields :category, :name, :brief
 
       field :description, :ck_editor
+      field :translations
     end
 
     list do

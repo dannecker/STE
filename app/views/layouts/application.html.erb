@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= I18n.locale %>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,15 @@
 
   <!--script src='//src.sencha.io/screen.js'></script-->
   <script src="/assets/js/modernizr.custom.79639.js"></script>
+
+  <link href="/assets/flags/basic.css" rel="stylesheet">
+  <link href="/assets/flags/flags16.css" rel="stylesheet">
+
+  <style>
+    .flags { float: right; }
+    .flags .flag { display: inline-block; margin: 30px 2px 0 0 }
+  </style>
+
 </head>
 <body>
 
@@ -54,6 +63,26 @@ $(document).ready(function() {
             $('#errorModal').modal('show');
         });
         return false;
+    });
+
+
+    $("li.flag").click(function() {
+        currentLocale = "/<%= I18n.locale %>/";
+        newLocale = "/" + $(this).data('locale') + "/";
+        path = window.location.href;
+
+        if (newLocale != currentLocale) {
+            urlParts = path.split("?");
+            if (urlParts.length > 1) {
+                window.location.href = urlParts[0] + "?locale=" + $(this).data('locale');
+            } else {
+                if (path.search(currentLocale) != -1) {
+                    window.location.href = path.replace(currentLocale, newLocale);
+                } else {
+                    window.location.href = path + newLocale;
+                }
+            }
+        }
     });
 });
 </script>

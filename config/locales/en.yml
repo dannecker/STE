@@ -1,23 +1,288 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  ste_logo: SPETS TECHNO EXPORT
+  nav:
+    home: Home
+    about: Who We Are
+    services: Services
+    news: News
+    catalogues: Catalogues
+    defence: Defence Products
+    rnd: Research & Development
+    downloads: Downloads
+    licenses: Licenses
+    contact_us: Contacts
+    pano_views: 3D Views
+    uav: UAV «R-100»
+  contact_us: Contact Us
+  contact_information: Contact Information
+  rnd: Research & Development
+  defence_products: Defence Products
+  continue: Continue
+  read_more: Read More
+  ago: ago
+  licences_and_certificates: Licenses & Certificates
+  about_ste: ABOUT <b>SPETS TECHNO EXPORT</b>
+  about_ste_text:
+  >
+    State Foreign Trade Enterprise “SpetsTechnoExport” is a fully state-run entity incorporated by
+     the Government of Ukraine in 1998 for export-import activities at foreign armaments markets.
+  head_office: HEAD OFFICE
+  head_office_contacts:
+  >
+    7, Moskowsky Avenue<br/>
+    04073, Kyiv, Ukraine<br/>
+    tel: +380 44 5685070<br/>
+    fax: +380 44 5685068
+  liaison_office: LIAISON OFFICE
+  liaison_office_contacts:
+  >
+    B-5/147 Safdarjung<br/>
+    110057, New Delhi<br/>
+    tel: +91 11 26153792<br/>
+    fax: +91 11 26153830
+  our_newsletter: OUR NEWSLETTER
+  subscribe_to_news: Subscribe to automatically receive STE press releases.
+  subscribe_placeholder: Add your email here and press enter
+  meet_our_history: Meet Our History
+  corporate_newsroom: Corporate <b>Newsroom</b>
+  tags_posts_widget:
+    tags: Tags
+    latest_news: Latest News
+  facts:
+    title: SOME <b>HISTORY</b> FACTS
+    fact_1:
+    >
+      <h5>10,000</h5>
+      <p>Tonnes of iron<br/><small>Shot at Siege of Sebastopol during Crimean War</small></p>
+    fact_2:
+    >
+      <h5>144,000</h5>
+      <p>Revolutions per minute<br/><small>Does a bullet fired from Lee Enfield rifle, as used in both world wars</small></p>
+    fact_3:
+    >
+      <h5>2,000</h5>
+      <p>Women<br/><small>The Nizam of Hyderabad raised in 1975 for his war against the Marathas</small></p>
+    fact_4:
+    >
+      <h5>130,000</h5>
+      <p>Meters<br/><small>Is an effective range of Big Bertha, the World War I howitzer</small></p>
+    cta: Interested in partnership opportunities?
+    cta_link: Contact us
+  home:
+    index:
+      title: State Foreign Trade Enterprise “SpetsTechnoExport”
+      subtile: Fully state-run entity incorporated by the Government of Ukraine in 1998 for export-import activities at foreign armaments markets.
+      ste_profile_title: SFTE <b>«SpetsTechnoExport»</b> Profile
+      ste_profile_description:
+      >
+        <p>Starting from July 1998 the State Foreign Trade Enterprise <b>«SpetsTechnoExport»</b> (Government of Ukraine Entity) specializes on export and import of up-to-date weapons, military products & technologies as well as special purpose equipment.</p>
+        <p>We also have tight cooperation with various Research Centers, Design Bureaus as well as Original Equipment Manufactures of the military-industrial complex of Ukraine and other countries.</p>
+        <p>Ukraine is one of the leading designer and manufacturer of the modern weapons, arms as well as personnel protection equipment.</p>
+      slider:
+        s1:
+          title: Navy
+          p1: Warships
+          p2: Unmanned Maritime Vessels
+          p3: Navigation Equipment
+        s2:
+          title: Air Force
+          p1: Aircraft
+          p2: Helicopters
+          p3: Unmanned Aerial Systems
+        s3:
+          title: Air Defence
+          p1: Surface-to-Air missile systems
+          p2: S-125 Pechora-2D Surface-to-Air missile system
+          p3: Radars
+        s4:
+          title: Electronic Warfare
+          p1: Direction Finding And Passive Reconnaissance Systems
+          p2: Radars
+          p3: Jamming Systems
+      cta_block: We will be glad to help our partners in distinguishing their needs in Ukrainian products, technologies and services.
+      general_areas: General Areas
+      uav_upgrades_more: UAVs, Upgrades and more
+      uav_radars: UAVs, Radars
+      authorisation_letters: Authorisation Letters
+      permits_and_more: Permits and more
+      army_navy_more: Army, Navy and more
+      army_navy_airforce: Army, Navy, Air Force
+      product_1:
+        title: AN-124<br/> <b>"Ruslan"</b>
+        description:
+        >
+          An-124 aircraft is designed for transportation of various cargos with 150 tons payload.
+          Unique transport capacity and high performance of aircraft were acknowledged in commercial operation.
+      product_2:
+        title: REECC<br/> <b>"Kolchuga"</b>
+        description:
+        >
+          The High-Precision Passive System of long-range targets&#58;
+          detection, identification-and-determination-of-ground, sea-and-air targets coordinates and directions of movement.
+      product_3:
+        title: MBT<br/> <b>"Yatagan"</b>
+        description:
+        >
+          The Yatagan МВТ is equipped with a 120 mm gun and an automatic loader placed in the turret bustle,
+          which enable it to fire NATO standard ammunition.
+  news:
+    show:
+      subscribe:
+        title: Found this useful?
+        desc: Consider to register to our weekly newsletter. Subscribe Now!
+        form_placeholder: Add your email here
+        button_text: SUBSCRIBE
+  services:
+    index:
+      title: Our <b>Services</b>
+      intro:
+      >
+        From the very beginning of our creation the Company gained reputation as a predicted and reliable partner majored in commercial support and trade facilitation Customers in various regions throughout the globe.<br><br>
+        <p>The main services which are provided SFTE “SpetsTechnoExport” around the world are as follows:</p>
+      air_force_title: Air Force
+      air_force_text:
+      >
+        <li>Overhaul, life extension, modernization and spare parts support of AN-32, MiG-23, MiG-27, MiG-29 and L-29 / 39 Aircraft</li>
+        <li>Supply of all range of spares, aggregates, units pertaining to all AN family Aircraft</li>
+        <li>Supply of MiG-21, MiG-29 and Su-30 aviation radar units, helmet mounted target designation systems, head-up displays, aggregates and spares</li>
+        <li>Overhaul and logistics support of all types & modifications of TU-142M, IL-38, IL-76/78, MiG and Sukhoi Aircraft Family, Kamov Family Helicopters and Mi-25/35, Mi-8/17 and Mi-14 Helicopters</li>
+        <li>Overhaul of R-11/13, R-25 (including R-25U-300 type), R-29, RD-33 and AL-31 series aeroengines, KSA-2(3) gear box and its aggregates. Aircraft aggregates, TG-16M and TA-9 and TA-12 turbogenerators. Overhaul of the Aggregates pertaining to the D-30KP (D-30KP-2) Aeroengine of IL-76 / 78 /A-50 Aircraft</li>
+        <li>Upgrade of Mi-8/17 and Mi-25/35 Helicopters</li>
+        <li>Modernization of mobile complexes MK-9.12 (for testing MiG-29 A/C) and GURT (for testing R-27, R-60 and R-73 missiles)</li>
+        <li>Supply of state-of-the-art Infrared Counter-Measure Station “ADROS”, engine exhaust shields, flare dispenser systems and development of complex protection of all rotary and fixed wing aircraft against all missiles with IR seeker heads existing in the world</li>
+        <li>Supply of modern tactical UAV, development and supply of defence UAV</li>
+        <li>Designing and development of different types of aviation aggregates, units, pumps etc. at Ukrainian Aggregates Design Bureaus</li>
+        <li>Training of the customers’ pilots and technical staff in Ukraine (in this regard please be noted that every early a lot of people (pilots, technical people etc.) from NATO countries are trained in Ukraine)</li>
+      army_title: Army
+      army_text:
+      >
+        <li>Modernization of T-55, T-72 tanks, APCs, BTR-50, 60, 70, 80, BMP-I, BMP-II</li>
+        <li>Supply of various type of Tanks, APCs and armoured special vehicles</li>
+        <li>Supply of Engines with increased HP (up to 1400) for T-72, T-80, T-84, T-90 tanks</li>
+        <li>Supply of active armour protection systems “Nozh”, “Zaslon”, “Duplet” and Range finder Jammer “F3 Fantom” for installation on tanks and APCs</li>
+        <li>Spare parts support of “Tunguska”, “Kvadrat”, ”Pechora”, “OSA-AKM”, “Shilka” anti-aircraft weapon systems, T-55, T-72, T-90, BMP-I/II/II, BRDEM armoured vehicles</li>
+        <li>Supply of KRAZ types vehicles and spares support, supply of spares for  URAL, ZIL vehicles</li>
+        <li>Training of the customers’ drivers and technical staff at Ukraine</li>
+        <li>Supply of different types of arms / armaments as well as supply of bullet-proof vest for army and paramilitary personal</li>
+      radio_title: Radio Electronic Equipment
+      radio_text:
+      >
+        <li>Development and supply of long range reconnaissance passive radar systems, jamming and monitoring systems: Kolchuga, Mineral-ME, Mandat, Liman etc. </li>
+        <li>Modernization and digitalization of P-18, P-19 radars, PRV altimeters, RSBN-4N radars, RSP-10 stations, transfer of technology, logistic support </li>
+        <li>Supply of new night and day vision sights and navigation equipment</li>
+        <li>Supply of equipment of information-intelligence complexes including GSM, CDMA, THURAYA and IRIDIUM monitoring systems</li>
+        <li>Supply of solid-sate flight data registering device BUR-4-1</li>
+        <li>Training of the customers operation and technical staff at Ukraine</li>
+      navy_title: Navy
+      navy_text:
+      >
+        <li>Supply, repair / overhaul and modernization of engineering systems, main engines, turbine equipment and weaponry of warships projects 1159.2, 1234, 1241RE, 1241.2, 205, 771, 61ME, 159, 1135.6, 266ME, 1258 and submarines 877EKM, 641</li>
+        <li>Production of dry and floating docks of reinforced concrete and composite frame with lifting capacity from 400 to 25 000 metric tons</li>
+        <li>Unique hydro acoustic systems for detection of underwater subversive forces and means, securing of coastal areas</li>
+      got_questions: Got questions?
+      contact_us: Contact Us
+      cta:
+      >
+        The SFTE “SpetsTechnoExport” has all Government licenses and permissions required for export of military
+        products abroad unlike other Ukrainian trading companies and OEM.
+      facts:
+        title: Some Facts
+        fact_1:
+        >
+          We are able to offer for supply all kinds of spares for the above mentioned Aircraft, Helicopters,
+          Tanks, APCs, Radars, Ships and Submarines, as well as aggregates, equipment and raw materials during
+          entire period of their operation.
+        fact_2:
+        >
+          “SpetsTechnoExport” is ready for mutually beneficial co-operation. We will be glad to help our
+          partners in distinguishing their needs in Ukrainian products, technologies and services.
+  catalogues:
+      defence:
+        defence_products: Defence Products
+        featured_prodcts: Featured Products
+      downloads:
+        available_downloads: Available Downloads
+      research:
+        rnd: Research & Development
+  licenses:
+    index:
+      title: Licenses, Certificates & Authorisation Letters
+  contact:
+    index:
+      form:
+        title: Need To Contact Us?
+        desc: You can contact our business development offices for trade show information. All questions from media professionals should be directed to our Corporate Infromation contacts.
+        name: Your Name
+        email: Your Email
+        subject: Subject
+        message: Enter Something
+        button: Submit
+      contacts_block:
+      >
+        <h4>Head Office, Ukraine</h4>
+        <br>
+        <hr>
+        <p>
+          7, Moskowsky Avenue<br/>
+          04073, Kyiv, Ukraine.
+        </p>
+        <p>
+          +380 44 568 5070<br/>
+          +380 44 568 5072<br/>
+          office@ste.kiev.ua
+        </p>
+        <br>
+        <h4>Liaison Office, India</h4>
+        <br>
+        <hr>
+        <p>
+          B-5/147 Safdarjung enclave<br/>
+          New Delhi – 110057
+        </p>
+        <p>
+          +91 11 26153792<br/>
+          +91 98 11164177<br/>
+          petr@ste.com.ua
+        </p>
+        <hr>
+  about:
+    index:
+      title:
+      >
+        <b>SpetsTechnoExport</b> focused on<br/>export-import activities at foreign armaments markets.
+      intro:
+      >
+        <h4>State Foreign Trade Enterprise <b>«SpetsTechnoExport»</b> specializes in export of up-to-date military technologies and rendering services on repair, modernization and maintenance of weapons and special-purpose equipment.</b>
+        <br><br>
+        <p>We are proud to remind you that Ukraine is one of few countries in the world that has great technological knowledge in industry and possesses full technological circle of manufacture.</p>
+        <p>Being conscious that fruitful cooperation at highly competitive market is a mutual interest of the Customers and Suppliers, we are proud to propose services of Ukrainian design bureaus and OEMs to fulfill all Customer’s requirements.</p></h4>
+      ceo:
+        name: Pavlo Barbul
+        position: Director
+        cv_pre:
+        >
+          <p><b>Date of birth</b> -January 29, 1987<br/>
+          <b>Place of birth</b> - Odessa, Ukraine<br/>
+          <b>Nationality</b> - Ukrainian</p>
+          <h4>Education<h4>
+          <p>2003-2008 - Ukrainian State University of Finance and International Trade.<br/>
+          He obtained Master’s Degree in international law in 2008.</p>
+        cv_post:
+          <h4>Career History</h4>
+          <p>
+          <b>Since 2006</b> - Lawyer of LLC "Trading house "Ukrsilhospmash".<br/>
+          <b>Since 2007</b> - Lawyer of LLC "The law firm "Arzinger & Partners".<br/>
+          <b>2009</b> - private law practice, including the founders of LCC "Vox Legum Law Firm".<br/>
+          <b>Since 2010</b> - Head of the Legal Department enforcement office financial restructuring and recovery of problem loans JSC "Swedbank".<br/>
+          <b>2014</b> - Director of Asset Management Department of the State Concern “Ukroboronprom”. <br/>
+          <b>Since December 2015</b> - Director of the Subsidiary of the State Company "Ukrspecexport" - the State Foreign Trade Enterprise "Spetstechnoexport".</p>
+      spacer: We have best practices and experience in arrangement of overhaul, life extension and modernization.
+      enterprise:
+        title: The Enterprise
+        text:
+        >
+          <p>SFTE "SpetsTechnoExport" supports and cooperates with various research centres and design bureaus.</p>
+          <p>Since 1998 the Enterprise has gained reputation of reliable partner ready to provide support to the Customers in
+          shortest period in different regions of the world. Our traditional and most esteemed partners are the
+          MoD of Republic of India, MoD of Algeria, MoD of Indonesia, MoD of Malaysia, MoD of Bangladesh and
+          other state and private companies all over the world.</p>

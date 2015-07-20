@@ -14,7 +14,7 @@ development:
   database: STE_development
   pool: 5
   username: root
-  password:
+  password: #g4tml100
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -32,17 +32,8 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: STE
-  pool: 5
+  database: ste
+  pool: 10
   username: root
-  password:
-  socket: /tmp/mysql.sock
-
-#production:
-#  adapter: mysql2
-#  encoding: utf8
-#  database: ste
-#  pool: 10
-#  username: root
-#  password: g4tml100
-#  host: 127.0.0.1
+  password: g4tml100
+  host: 127.0.0.1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402192208) do
+ActiveRecord::Schema.define(version: 20150715225027) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -21,11 +21,24 @@ ActiveRecord::Schema.define(version: 20140402192208) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order"
+    t.integer  "parent_id"
     t.boolean  "active"
   end
 
   add_index "categories", ["ancestry"], name: "index_categories_on_ancestry", using: :btree
   add_index "categories", ["order"], name: "index_categories_on_order", using: :btree
+
+  create_table "category_translations", force: true do |t|
+    t.integer  "category_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "brief"
+  end
+
+  add_index "category_translations", ["category_id"], name: "index_category_translations_on_category_id", using: :btree
+  add_index "category_translations", ["locale"], name: "index_category_translations_on_locale", using: :btree
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -42,6 +55,18 @@ ActiveRecord::Schema.define(version: 20140402192208) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "document_translations", force: true do |t|
+    t.integer  "document_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "kind"
+  end
+
+  add_index "document_translations", ["document_id"], name: "index_document_translations_on_document_id", using: :btree
+  add_index "document_translations", ["locale"], name: "index_document_translations_on_locale", using: :btree
 
   create_table "documents", force: true do |t|
     t.string   "title"
@@ -67,6 +92,19 @@ ActiveRecord::Schema.define(version: 20140402192208) do
     t.datetime "updated_at"
   end
 
+  create_table "post_translations", force: true do |t|
+    t.integer  "post_id",     null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "description"
+    t.text     "content"
+  end
+
+  add_index "post_translations", ["locale"], name: "index_post_translations_on_locale", using: :btree
+  add_index "post_translations", ["post_id"], name: "index_post_translations_on_post_id", using: :btree
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "description"
@@ -85,6 +123,19 @@ ActiveRecord::Schema.define(version: 20140402192208) do
   end
 
   add_index "posts_tags", ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true, using: :btree
+
+  create_table "product_translations", force: true do |t|
+    t.integer  "product_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "brief"
+    t.text     "description"
+  end
+
+  add_index "product_translations", ["locale"], name: "index_product_translations_on_locale", using: :btree
+  add_index "product_translations", ["product_id"], name: "index_product_translations_on_product_id", using: :btree
 
   create_table "products", force: true do |t|
     t.integer  "category_id"

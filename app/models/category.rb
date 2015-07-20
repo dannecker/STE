@@ -6,12 +6,17 @@ class Category < ActiveRecord::Base
 
   validates :name, presence: true
 
+  translates :name, :brief
+  accepts_nested_attributes_for :translations, allow_destroy: true
+
   rails_admin do
     nestable_tree true
+    configure :translations, :globalize_tabs
 
     edit do
       field :name
       field :brief
+      field :translations
     end
   end
 end

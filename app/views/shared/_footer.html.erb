@@ -2,42 +2,37 @@
 <div id="f">
   <div class="container">
     <div class="row">
-      <h5 class="centered">Contact Information</h5>
+      <h5 class="centered"><%= t :contact_information %></h5>
       <br>
 
       <div class="col-lg-4">
-        <p>ABOUT <b>SPETS TECHNO EXPORT</b></p>
-        <p><small>State Foreign Trade Enterprise “SpetsTechnoExport” is a fully state-run entity incorporated by the Government of Ukraine in 1998 for export-import activities at foreign armaments markets.</small></p>
+        <p><%= raw t :about_ste %></p>
+        <p><small><%= t :about_ste_text %></small></p>
         <p><img src="/assets/images/ukrop-ft.png" class="ukrop-footer"></p>
       </div>
 
       <div class="col-lg-4">
         <div class="col-lg-6 head-office">
-          <p>HEAD OFFICE</p>
+          <p><%= t :head_office %></p>
           <p><small>
-            7, Moskowsky Avenue<br/>
-            04073, Kyiv, Ukraine<br/>
-            tel: +380 44 5685070<br/>
-            fax: +380 44 5685068
+            <%= raw t :head_office_contacts %>
           </small></p>
         </div>
         <div class="col-lg-6 liaison-office">
-          <p>LIAISON OFFICE</p>
+          <p><%= t :liaison_office %></p>
           <p><small>
-            B-5/147 Safdarjung<br/>
-            110057, New Delhi<br/>
-            tel: +91 11 26153792<br/>
-            fax: +91 11 26153830
+            <%= raw t :liaison_office_contacts %>
           </small></p>
         </div>
       </div>
 
       <div class="col-lg-4">
-        <p>OUR NEWSLETTER</p>
-        <p><small>Subscribe to automatically receive STE press releases.</small></p>
+        <p><%= t :our_newsletter %></p>
+        <p><small><%= t :subscribe_to_news %></small></p>
         <p><%= form_for Subscriber.new do |f| %>
-              <%= f.email_field :email, placeholder: "Add your email here", class: "form-control flat" %><br />
+              <%= f.email_field :email, placeholder: t(:subscribe_placeholder), class: "form-control flat" %><br />
           <% end %></p>
+		<p><small>STE, Спецтехноекспорт, Спецтехноэкспорт</small></p>
       </div>
     </div><!-- /row -->
   </div><!-- /container -->

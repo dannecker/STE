@@ -20,13 +20,18 @@ class Document < ActiveRecord::Base
     DOWNLOAD_TYPES + LICENSE_TYPES
   end
 
+  translates :title, :kind
+  accepts_nested_attributes_for :translations, allow_destroy: true
+
   rails_admin do
+    configure :translations, :globalize_tabs
+
     edit do
-      include_fields :title, :kind, :attachment, :preview
+      include_fields :title, :kind, :attachment, :preview, :translations
     end
 
     list do
-      include_fields :title, :kind, :attachment, :preview
+      include_fields :title, :kind, :attachment, :preview, :translations
     end
   end
 end
